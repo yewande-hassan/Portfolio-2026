@@ -99,7 +99,9 @@
   gap: 10px;
 }
 
-.contact-card__actions button {
+.contact-card__actions a {
+  text-decoration: none;
+  color: inherit;
   border: 1px solid #b9b1a6;
   background: transparent;
   padding: 10px 14px;
@@ -107,6 +109,12 @@
   text-transform: uppercase;
   letter-spacing: 0.16em;
   cursor: pointer;
+  text-align: center;
+}
+
+.contact-card__actions a:hover,
+.contact-card__actions a:focus-visible {
+  border-color: #1e242e;
 }
 
 .contact-card__links {

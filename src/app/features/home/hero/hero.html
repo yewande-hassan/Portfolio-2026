@@ -8,21 +8,7 @@
         emotion, pairing clean systems with storytelling, motion, and a sharp eye
         for detail.
       </p>
-      <div class="hero__metrics">
-        <div>
-          <p class="hero__metric-value">5+ years</p>
-          <p class="hero__metric-label">Product &amp; platform builds</p>
-        </div>
-        <div>
-          <p class="hero__metric-value">38%</p>
-          <p class="hero__metric-label">Average performance lift</p>
-        </div>
-        <div>
-          <p class="hero__metric-value">10 launches</p>
-          <p class="hero__metric-label">From idea to production</p>
-        </div>
-      </div>
-      <div class="hero__timeline">
+        <div class="hero__timeline">
         <div class="hero__timeline-item">
           <span class="hero__timeline-date">2021</span>
           <span class="hero__timeline-text">Design system overhaul for fintech teams.</span>
@@ -49,15 +35,39 @@
           Motion direction
           <span>Purposeful animation tied to narrative beats.</span>
         </button>
+        <button class="hero__chip" type="button">
+          API integration
+          <span>Reliable data fetching that keeps users in sync.</span>
+        </button>
+        <button class="hero__chip" type="button">
+          Cloud migration
+          <span>Confidently moving services to scalable cloud infrastructure.</span>
+        </button>
       </div>
+
     </div>
 
-    <div class="hero__card">
-      <div
-        class="hero__image-slider"
-        [style.--slider-duration]="sliderDuration"
-        [style.--slide-interval]="slideInterval"
-      >
+      <div class="hero__card">
+        <div class="hero__metrics hero__metrics--right">
+          <p class="hero__metrics-title">My metrics</p>
+          <div>
+            <p class="hero__metric-value">5+ years</p>
+            <p class="hero__metric-label">Product &amp; platform builds</p>
+          </div>
+          <div>
+            <p class="hero__metric-value">38%</p>
+            <p class="hero__metric-label">Average performance lift</p>
+          </div>
+          <div>
+            <p class="hero__metric-value">10 launches</p>
+            <p class="hero__metric-label">From idea to production</p>
+          </div>
+        </div>
+        <div
+          class="hero__image-slider"
+          [style.--slider-duration]="sliderDuration"
+          [style.--slide-interval]="slideInterval"
+        >
         <img
           class="hero__image-slide"
           *ngFor="let image of sliderImages; let i = index"
@@ -78,32 +88,5 @@
       </div>
     </div>
   </div>
-  <div class="hero__feature">
-    <div>
-      <p class="hero__feature-label">Featured case study</p>
-      <h2 class="hero__feature-title">SignalDesk - real-time fleet intelligence</h2>
-      <p class="hero__feature-text">
-        Rebuilt the command center UI to reduce cognitive load and improve response
-        time across 14 regional teams. Crafted a modular data model, layered
-        interactions, and contextual guidance for operators.
-      </p>
-    </div>
-    <div class="hero__feature-meta">
-      <div>
-        <span>Outcome</span>
-        <strong>43% faster incident resolution</strong>
-      </div>
-      <div>
-        <span>Role</span>
-        <strong>Lead UI Engineer</strong>
-      </div>
-      <button
-        class="hero__feature-link"
-        type="button"
-        (click)="navigate.emit('work')"
-      >
-        Read the 10-second story
-      </button>
-    </div>
-  </div>
+
 </section>

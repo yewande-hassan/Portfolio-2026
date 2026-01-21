@@ -54,6 +54,20 @@
   box-shadow: 0 12px 30px rgba(30, 36, 46, 0.12);
 }
 
+.hero__metrics--right {
+  margin: clamp(20px, 3vw, 28px) clamp(20px, 4vw, 32px) 0;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.hero__metrics-title {
+  grid-column: 1 / -1;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 11px;
+  color: #6b7280;
+}
+
 .hero__metric-value {
   margin: 0 0 6px;
   font-family: 'Cormorant Garamond', serif;
@@ -106,6 +120,7 @@
   color: inherit;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 12px 30px rgba(30, 36, 46, 0.12);
 }
 
 .hero__chip span {

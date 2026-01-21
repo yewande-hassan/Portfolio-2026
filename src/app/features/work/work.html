@@ -8,46 +8,126 @@
 
     <div class="work-page__grid">
       <article class="work-tile">
-        <div class="work-tile__image">
-          <img src="assets/hero-slider-01.png" alt="SignalDesk interface preview" />
+        <div
+          class="work-tile__image work-tile__image--slider"
+          [style.--slider-duration]="jobtrackerDuration"
+          [style.--slide-interval]="jobtrackerInterval"
+        >
+          <img
+            class="work-tile__slide"
+            *ngFor="let image of jobtrackerImages; let i = index"
+            [src]="image.src"
+            [alt]="image.alt"
+            [style.--slide-index]="i"
+          />
         </div>
         <div class="work-tile__text">
-          <span>Operations</span>
-          <h2>SignalDesk Command Center</h2>
-          <p>Real-time fleet intelligence.</p>
+          <span>Career tools</span>
+          <h2>JobTracker AI Platform</h2>
+          <p>
+            AI-powered tracking for applications, interviews, offers, and schedules.
+          </p>
+          <a
+            class="work-tile__link"
+            href="https://job-tracker-app-lovat.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View live
+          </a>
         </div>
       </article>
 
       <article class="work-tile">
-        <div class="work-tile__image">
-          <img src="assets/hero-slider-02.png" alt="LedgerFlow product preview" />
+        <div
+          class="work-tile__image work-tile__image--slider"
+          [style.--slider-duration]="tymmedDuration"
+          [style.--slide-interval]="tymmedInterval"
+        >
+          <img
+            class="work-tile__slide"
+            *ngFor="let image of tymmedImages; let i = index"
+            [src]="image.src"
+            [alt]="image.alt"
+            [style.--slide-index]="i"
+          />
         </div>
         <div class="work-tile__text">
-          <span>Fintech</span>
-          <h2>LedgerFlow Accounts Suite</h2>
-          <p>Unified onboarding journeys.</p>
+          <span>Scheduling + payments</span>
+          <h2>Tymmed Scheduling + Payment Platform</h2>
+          <p>
+            AI-powered booking, pricing, and automatic payouts with cashback rewards
+            for clients.
+          </p>
+          <a
+            class="work-tile__link"
+            href="https://tymmed.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View live
+          </a>
         </div>
       </article>
 
       <article class="work-tile">
-        <div class="work-tile__image">
-          <img src="assets/hero-slider-03.png" alt="ResolveIQ AI workflow preview" />
+        <div
+          class="work-tile__image work-tile__image--slider"
+          [style.--slider-duration]="demicareDuration"
+          [style.--slide-interval]="demicareInterval"
+        >
+          <img
+            class="work-tile__slide"
+            *ngFor="let image of demicareImages; let i = index"
+            [src]="image.src"
+            [alt]="image.alt"
+            [style.--slide-index]="i"
+          />
         </div>
         <div class="work-tile__text">
-          <span>Support AI</span>
-          <h2>ResolveIQ Assist</h2>
-          <p>LLM-powered support triage.</p>
+          <span>Beauty tech</span>
+          <h2>DemiCare Skin Intelligence</h2>
+          <p>
+            AI and expert-led skin assessments with personalized product
+            recommendations.
+          </p>
+          <a
+            class="work-tile__link"
+            href="https://www.demicare.skin/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View live
+          </a>
         </div>
       </article>
 
       <article class="work-tile">
-        <div class="work-tile__image">
-          <img src="assets/hero-slider-04.png" alt="AtlasOps platform preview" />
+        <div
+          class="work-tile__image work-tile__image--slider"
+          [style.--slider-duration]="japanDuration"
+          [style.--slide-interval]="japanInterval"
+        >
+          <img
+            class="work-tile__slide"
+            *ngFor="let image of japanImages; let i = index"
+            [src]="image.src"
+            [alt]="image.alt"
+            [style.--slide-index]="i"
+          />
         </div>
         <div class="work-tile__text">
-          <span>Platform</span>
-          <h2>AtlasOps Analytics</h2>
-          <p>Executive-ready visibility.</p>
+          <span>Dating</span>
+          <h2>Japan Dating App</h2>
+          <p>A matchmaking experience built for Japanese singles.</p>
+          <a
+            class="work-tile__link"
+            href="https://reaveal-sand.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View live
+          </a>
         </div>
       </article>
     </div>

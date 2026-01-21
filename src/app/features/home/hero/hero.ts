@@ -13,19 +13,19 @@ export class Hero {
   slideInterval = '3s';
   sliderImages = [
     {
-      src: 'assets/hero-slider-01.png',
+      src: 'assets/JobTracker/hero-slider-01.png',
       alt: 'Portrait of Wendy in a studio setting',
     },
     {
-      src: 'assets/hero-slider-02.png',
+      src: 'assets/JobTracker/hero-slider-02.png',
       alt: 'Portrait of Wendy with braids',
     },
     {
-      src: 'assets/hero-slider-03.png',
+      src: 'assets/JobTracker/hero-slider-03.png',
       alt: 'Portrait of Wendy in a warm light',
     },
     {
-      src: 'assets/hero-slider-04.png',
+      src: 'assets/JobTracker/hero-slider-04.png',
       alt: 'Portrait of Wendy with a neutral backdrop',
     },
   ];
