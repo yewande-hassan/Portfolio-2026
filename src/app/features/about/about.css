@@ -1,0 +1,129 @@
+.about-page {
+  min-height: 100vh;
+  padding: calc(clamp(48px, 8vw, 96px) + 96px) clamp(20px, 6vw, 72px)
+    calc(clamp(72px, 10vw, 120px) + 72px);
+  background: #efeae3;
+  color: #1e242e;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.about-page__content {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+.about-page__eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 16px;
+}
+
+.about-page__title {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 5vw, 56px);
+}
+
+.about-page__intro {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #3b4452;
+  max-width: 720px;
+}
+
+.about-page__story {
+  margin-top: 12px;
+  padding: 20px 24px;
+  background: #f7f2eb;
+  border-left: 4px solid #8c7f72;
+  box-shadow: 0 16px 30px rgba(20, 24, 32, 0.08);
+  display: grid;
+  gap: 12px;
+}
+
+.about-page__story p {
+  margin: 0;
+  line-height: 1.7;
+  color: #434c5b;
+}
+
+.about-page__grid {
+  margin-top: 20px;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.about-page__grid--three {
+  margin-top: 28px;
+}
+
+.about-page__panel {
+  background: #f7f2eb;
+  border: 1px solid #c9c3b9;
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+  box-shadow: 0 18px 40px rgba(20, 24, 32, 0.1);
+}
+
+.about-page__panel-title {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+}
+
+.about-page__list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 10px;
+  color: #414b59;
+  line-height: 1.6;
+}
+
+.about-page__steps {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 12px;
+  color: #414b59;
+  line-height: 1.6;
+}
+
+.about-page__steps strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.about-page__stack {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.about-page__stack li {
+  border: 1px solid #c1b9ae;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 14px;
+  text-align: center;
+  background: #fdf9f4;
+}
+
+@media (max-width: 600px) {
+  .about-page__panel {
+    padding: 20px;
+  }
+
+  .about-page__stack {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}

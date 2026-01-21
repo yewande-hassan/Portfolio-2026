@@ -1,0 +1,86 @@
+<header class="site-nav">
+  <div class="site-nav__brand">Wendy Dev</div>
+  <nav class="site-nav__links">
+    <button
+      type="button"
+      class="site-nav__link"
+      [class.is-active]="activeSection() === 'about'"
+      (click)="setSection('about')"
+    >
+      About
+    </button>
+    <button
+      type="button"
+      class="site-nav__link"
+      [class.is-active]="activeSection() === 'work'"
+      (click)="setSection('work')"
+    >
+      Work
+    </button>
+    <button
+      type="button"
+      class="site-nav__link"
+      [class.is-active]="activeSection() === 'contact'"
+      (click)="setSection('contact')"
+    >
+      Contact
+    </button>
+  </nav>
+  <a class="site-nav__cta" href="assets/yewande-hassan-resume.pdf" download>
+    Download resume
+  </a>
+</header>
+
+<main class="page-flip">
+  <section
+    class="page-flip__panel"
+    [class.is-active]="activeSection() === 'home'"
+    [attr.aria-hidden]="activeSection() !== 'home'"
+  >
+    <app-hero (navigate)="setSection($event)"></app-hero>
+  </section>
+  <section
+    class="page-flip__panel"
+    [class.is-active]="activeSection() === 'about'"
+    [attr.aria-hidden]="activeSection() !== 'about'"
+  >
+    <app-about></app-about>
+  </section>
+  <section
+    class="page-flip__panel"
+    [class.is-active]="activeSection() === 'work'"
+    [attr.aria-hidden]="activeSection() !== 'work'"
+  >
+    <app-work></app-work>
+  </section>
+  <section
+    class="page-flip__panel"
+    [class.is-active]="activeSection() === 'contact'"
+    [attr.aria-hidden]="activeSection() !== 'contact'"
+  >
+    <app-contact></app-contact>
+  </section>
+</main>
+
+<footer class="page-footer" *ngIf="activeSection() !== 'home'">
+  <button
+    class="page-footer__arrow"
+    type="button"
+    aria-label="Go to home"
+    (click)="goHome()"
+  >
+    <span class="page-footer__chevron">⤺</span>
+    <span class="page-footer__label">Home</span>
+  </button>
+  <button
+    class="page-footer__arrow"
+    type="button"
+    aria-label="Go to previous section"
+    (click)="goPrevious()"
+  >
+    <span class="page-footer__chevron">←</span>
+    <span class="page-footer__label">Previous</span>
+  </button>
+</footer>
+
+<router-outlet />

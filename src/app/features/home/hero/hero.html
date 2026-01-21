@@ -1,0 +1,109 @@
+<section class="hero">
+  <div class="hero__body">
+    <div class="hero__intro">
+      <p class="hero__role">Software Engineer</p>
+      <h1 class="hero__title">Interfaces that feel precise, alive, and human.</h1>
+      <p class="hero__summary">
+        I craft elegant, data-aware web experiences that balance clarity and
+        emotion, pairing clean systems with storytelling, motion, and a sharp eye
+        for detail.
+      </p>
+      <div class="hero__metrics">
+        <div>
+          <p class="hero__metric-value">5+ years</p>
+          <p class="hero__metric-label">Product &amp; platform builds</p>
+        </div>
+        <div>
+          <p class="hero__metric-value">38%</p>
+          <p class="hero__metric-label">Average performance lift</p>
+        </div>
+        <div>
+          <p class="hero__metric-value">10 launches</p>
+          <p class="hero__metric-label">From idea to production</p>
+        </div>
+      </div>
+      <div class="hero__timeline">
+        <div class="hero__timeline-item">
+          <span class="hero__timeline-date">2021</span>
+          <span class="hero__timeline-text">Design system overhaul for fintech teams.</span>
+        </div>
+        <div class="hero__timeline-item">
+          <span class="hero__timeline-date">2023</span>
+          <span class="hero__timeline-text">Launched real-time ops dashboard at scale.</span>
+        </div>
+        <div class="hero__timeline-item">
+          <span class="hero__timeline-date">2025</span>
+          <span class="hero__timeline-text">Built AI-assisted workflow for support orgs.</span>
+        </div>
+      </div>
+      <div class="hero__capabilities">
+        <button class="hero__chip" type="button">
+          Design systems
+          <span>Token-first UI libraries with strong governance.</span>
+        </button>
+        <button class="hero__chip" type="button">
+          Data storytelling
+          <span>Dashboards that surface signal, not noise.</span>
+        </button>
+        <button class="hero__chip" type="button">
+          Motion direction
+          <span>Purposeful animation tied to narrative beats.</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="hero__card">
+      <div
+        class="hero__image-slider"
+        [style.--slider-duration]="sliderDuration"
+        [style.--slide-interval]="slideInterval"
+      >
+        <img
+          class="hero__image-slide"
+          *ngFor="let image of sliderImages; let i = index"
+          [src]="image.src"
+          [alt]="image.alt"
+          [style.--slide-index]="i"
+        />
+      </div>
+      <div class="hero__card-footer">
+        <span class="hero__card-title">Selected work</span>
+        <button
+          class="hero__card-link"
+          type="button"
+          (click)="navigate.emit('work')"
+        >
+          View projects
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="hero__feature">
+    <div>
+      <p class="hero__feature-label">Featured case study</p>
+      <h2 class="hero__feature-title">SignalDesk - real-time fleet intelligence</h2>
+      <p class="hero__feature-text">
+        Rebuilt the command center UI to reduce cognitive load and improve response
+        time across 14 regional teams. Crafted a modular data model, layered
+        interactions, and contextual guidance for operators.
+      </p>
+    </div>
+    <div class="hero__feature-meta">
+      <div>
+        <span>Outcome</span>
+        <strong>43% faster incident resolution</strong>
+      </div>
+      <div>
+        <span>Role</span>
+        <strong>Lead UI Engineer</strong>
+      </div>
+      <button
+        class="hero__feature-link"
+        type="button"
+        (click)="navigate.emit('work')"
+      >
+        Read the 10-second story
+      </button>
+    </div>
+  </div>
+</section>
