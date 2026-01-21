@@ -20,6 +20,7 @@ export class App {
   protected readonly previousSection = signal<
     'home' | 'about' | 'work' | 'contact'
   >('home');
+  protected readonly navOpen = signal(false);
   private readonly availableSections = new Set(['home', 'about', 'work', 'contact']);
 
   protected hasSection(section: string): boolean {
@@ -36,6 +37,11 @@ export class App {
     }
 
     this.activeSection.set(section as 'home' | 'about' | 'work' | 'contact');
+    this.navOpen.set(false);
+  }
+
+  protected toggleNav(): void {
+    this.navOpen.update((value) => !value);
   }
 
   protected goHome(): void {

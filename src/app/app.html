@@ -1,6 +1,17 @@
 <header class="site-nav">
   <div class="site-nav__brand">Wendy Dev</div>
-  <nav class="site-nav__links">
+  <button
+    class="site-nav__toggle"
+    type="button"
+    (click)="toggleNav()"
+    [attr.aria-expanded]="navOpen()"
+    aria-label="Toggle navigation"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="site-nav__links" [class.is-open]="navOpen()">
     <button
       type="button"
       class="site-nav__link"
@@ -26,7 +37,12 @@
       Contact
     </button>
   </nav>
-  <a class="site-nav__cta" href="assets/yewande-hassan-resume.pdf" download>
+  <a
+    class="site-nav__cta"
+    [class.is-open]="navOpen()"
+    href="assets/yewande-hassan-resume.pdf"
+    download
+  >
     Download resume
   </a>
 </header>

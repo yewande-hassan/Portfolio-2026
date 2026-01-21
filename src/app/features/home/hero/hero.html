@@ -74,6 +74,9 @@
           [src]="image.src"
           [alt]="image.alt"
           [style.--slide-index]="i"
+          [attr.loading]="i === 0 ? 'eager' : 'lazy'"
+          [attr.fetchpriority]="i === 0 ? 'high' : 'low'"
+          decoding="async"
         />
       </div>
       <div class="hero__card-footer">

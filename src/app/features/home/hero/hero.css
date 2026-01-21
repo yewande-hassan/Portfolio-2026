@@ -2,7 +2,8 @@
   min-height: 100vh;
   background: var(--bg-main);
   color: var(--text-primary);
-  padding: calc(clamp(24px, 4vw, 48px) + 96px) clamp(20px, 6vw, 72px)
+  padding: calc(clamp(24px, 4vw, 48px) + var(--nav-offset, 96px))
+    clamp(20px, 6vw, 72px)
     calc(clamp(24px, 4vw, 48px) + 72px);
   display: flex;
   flex-direction: column;
